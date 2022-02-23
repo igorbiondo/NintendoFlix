@@ -4,5 +4,5 @@ document.getElementById('play').addEventListener('click', () => {
 
 });
 
-var dados = 'dkc'
+var dados = 'smw'
 sessionStorage.setItem('chave', dados );
