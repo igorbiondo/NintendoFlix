@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style/gameStyle.css">
 </head>
 <body>
-    <div style="width:640px;height:480px;max-width:100%">
-        <div id="game"></div>
-      </div>
-      <script>
-          var game = sessionStorage.getItem('chave');
+    <div class="container">
+        <div class="display" style="width:1024px;height:768px;max-width:100%">
+            <div id="game"></div>
+        </div>
+    </div>
+        <script>
+            let gameN = window.location.href.split('http://127.0.0.1:5500/game.html?game=')[1]
         </script>
 <script type="text/javascript">
     EJS_player = '#game';
-    EJS_gameUrl = `./js/games/${game}.zip`; // Url to Game rom
+    EJS_gameUrl = `./js/games/${gameN}.zip`; // Url to Game rom
     EJS_core = 'snes';
     EJS_mouse = false; // SNES Mouse
     EJS_multitap = false; // SNES Multitap
     EJS_pathtodata = 'js/data/'; //path to all of the wasm and js files. MUST all be in the same directory!!
     EJS_language = 'pt-BR';
     EJS_startOnLoaded = true;
-    EJS_gameID = 1;
-    EJS_oldEJSNetplayServer = true;
-    
 </script>
 <script src="./js/data/loader.js"></script>
 </body>
